@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <!--[if lte IE 8]><script src="{{asset "css/ie/html5shiv.js"}}"></script><![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    <script src="{{asset "js/skel.min.js"}}"></script>
+    <script src="{{asset "js/skel-layers.min.js"}}"></script>
+    <script src="{{asset "js/init.js"}}"></script>
+    <noscript>
+        <link rel="stylesheet" href="{{asset "css/skel.css"}}" />
+        <link rel="stylesheet" href="{{asset "css/style.css"}}" />
+        <link rel="stylesheet" href="{{asset "css/style-xlarge.css"}}" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{asset "css/ie/v8.css"}}" /><![endif]-->
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    <div class="site-wrapper">
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <section class="4u 6u(medium) 12u$(small) text">
+                        <h3>Supporters</h3>
+                        <ul class="alt">
+                            <li>
+                                <div><a href="https://www.browserstack.com/" target="_blank">BrowserStack</a></div>
+                                <div>Live, Web-Based Browser Testing on all desktop and mobile browsers.</div>
+                            </li>
+                            <li>
+                                <div><a href="https://www.digitalocean.com/?refcode=83d5bd58a95d" target="_blank">Digital Ocean</a></div>
+                                <div>Simple Cloud Hosting, Built for Developers.</div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="4u 6u$(medium) 12u$(small) text">
+                        <h3>Get in touch</h3>
+                        <ul class="alt">
+                            <li>
+                                If you want to leave some feedback about jHERE, feel free to email me at <a class="email" href="">max at jhere dot net</a>.
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="4u$ 12u$(medium) 12u$(small)">
+                        <h3>Social</h3>
+                        <ul class="icons">
+                            <li><a href="https://github.com/mmarcon/jhere" class="icon rounded fa-github-alt"><span class="label">Github</span></a></li>
+                            <li><a href="https://twitter.com/mmarcon" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://de.linkedin.com/in/massimilianomarcon" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </section>
+                </div>
+                <ul class="copyright">
+                    <li><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</li>
+                    <li><a href="http://marcon.me">Massimiliano Marcon</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+</body>
+</html>
